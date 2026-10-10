@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d0e11;
+  --foreground: #ededed;
+  --card: #141519;
+  --card-hover: #191a20;
+  --muted: #1c1d23;
+  --muted-foreground: #8e909a;
+  --border: #23252e;
+  --border-light: #2e313d;
+  --accent: #df7438;
+  --accent-ink: #f0894e;
+  --accent-soft: rgba(223, 116, 56, 0.08);
+  --accent-soft-border: rgba(223, 116, 56, 0.25);
+  --scene-bg: #111216;
+}
+
+.light {
+  --background: #fafaf8;
+  --foreground: #141416;
+  --card: #ffffff;
+  --card-hover: #f7f7f4;
+  --muted: #f0f0eb;
+  --muted-foreground: #6c6d75;
+  --border: #e2e2dc;
+  --border-light: #d4d4cd;
+  --accent: #c45b20;
+  --accent-ink: #b24e18;
+  --accent-soft: rgba(196, 91, 32, 0.07);
+  --accent-soft-border: rgba(196, 91, 32, 0.22);
+  --scene-bg: #f3f3ee;
+}
+
+html, body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.font-mono {
+  font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.font-display {
+  font-family: 'Lora', Georgia, serif;
+}
+
+/* Custom hairline borders and transitions */
+.hairline-border {
+  border: 1px solid var(--border);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+@keyframes signalPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(223, 116, 56, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(223, 116, 56, 0);
+  }
+}
+
+.animate-signal {
+  animation: signalPulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pathTravel {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-path-travel {
+  stroke-dasharray: 8 16;
+  animation: pathTravel 2.5s linear infinite;
+}
