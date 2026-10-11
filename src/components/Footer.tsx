@@ -68,16 +68,60 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom row */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[var(--muted-foreground)]">
-          <p>© {new Date().getFullYear()} Agentframe Inc. Built for portfolio excellence.</p>
-          <p className="flex items-center gap-4">
-            <span>Designed with precision</span>
+        {/* Developer Credit & Bottom Row */}
+        <div className="pt-8 pb-4 flex flex-col md:flex-row items-center justify-between gap-5 border-b border-[var(--border)]/60">
+          <a
+            href="https://salah-portfolio-pink.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="About the Developer: Salah - Software Developer and Creative Technologist"
+            className="group relative inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-[var(--border)] bg-[var(--card)]/90 hover:border-[var(--accent)]/40 hover:bg-[var(--accent-soft)] transition-all duration-300 shadow-xs"
+          >
+            <img
+              src="/assets/s-symbol.webp"
+              alt=""
+              width={16}
+              height={19}
+              loading="lazy"
+              decoding="async"
+              className="w-3.5 h-auto object-contain transition-transform duration-300 group-hover:scale-110 flex-shrink-0"
+            />
+            <span className="font-mono text-[11px] tracking-wider uppercase flex items-center gap-1.5 flex-wrap">
+              <span className="font-semibold text-[var(--foreground)] group-hover:text-[var(--accent-ink)] transition-colors">
+                SALAH
+              </span>
+              <span className="text-[var(--muted-foreground)]/50 font-normal" aria-hidden="true">·</span>
+              <span className="text-[var(--muted-foreground)] group-hover:text-[var(--foreground)] transition-colors text-[10px]">
+                SOFTWARE DEVELOPER
+              </span>
+              <span className="text-[var(--muted-foreground)]/50 font-normal" aria-hidden="true">·</span>
+              <span className="text-[var(--muted-foreground)] group-hover:text-[var(--foreground)] transition-colors text-[10px]">
+                CREATIVE TECHNOLOGIST
+              </span>
+            </span>
+            <span className="text-[10px] text-[var(--muted-foreground)] group-hover:text-[var(--accent-ink)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200 ml-0.5">
+              ↗
+            </span>
+          </a>
+
+          <div className="flex items-center gap-4 text-xs font-mono text-[var(--muted-foreground)]">
+            <span>Crafted with precision</span>
             <span>•</span>
-            <a href="#top" className="hover:text-[var(--foreground)] transition-colors">Back to top ↑</a>
+            <a href="#top" className="hover:text-[var(--foreground)] transition-colors">
+              Back to top ↑
+            </a>
+          </div>
+        </div>
+
+        {/* Bottom copyright row */}
+        <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-[var(--muted-foreground)]">
+          <p>© {new Date().getFullYear()} Agentframe Inc. Built for portfolio excellence.</p>
+          <p className="text-[11px] text-[var(--muted-foreground)]/80">
+            Open harness for agentic intelligence.
           </p>
         </div>
       </div>
     </footer>
   )
 }
+
